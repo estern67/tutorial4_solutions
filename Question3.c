@@ -35,5 +35,6 @@ int main()
     printf(" %d is the smallest number",c);
 
 
+    return 0;
 
 }
