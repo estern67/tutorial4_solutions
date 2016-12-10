@@ -3,104 +3,43 @@
 //  tutorial4_solutions
 //
 //  Created by Mohamed Diaby on 09/12/2016.
+//  Edited by Einstein winluck on 10/12/2016
 //  Copyright © 2016 Mohamed Diaby. All rights reserved.
 //
 
 #include <stdio.h>
 
-
-    int main()
-
-  {
-
-      int time_hrs;
-      
-      int time_washington;
-      
-      int time_beijin;
-      
-      int time_moscow;
-      
-      int min;
-      
-
-      
-      
-      
-      printf("Enter hours: \n");
-      scanf("%d",&time_hrs);
-      
-      printf("Enter minutes: \n");
-      scanf("%d", &min);
-      
-      // To check that the hrs and min entered is not greater or equal to 23 and 59 respectively
-      
-      if(time_hrs<=23 && min <= 59)
-          
-      {
-      
-          
-          
-          time_washington = time_hrs - 5;
-          
-          
-          // incase time hrs are greater or equal to 24
-          
-          if(time_washington >=24){
-          
-         time_washington = time_washington - 24;
-              
-              
-            }
-          
-          
-       
-          
-          
-          time_beijin = time_hrs + 7;
-          
-           // incase time hrs are greater or equal to 24
-          
-          if(time_beijin >= 24)
-
-          {
-          
-              time_beijin = time_beijin - 24;
-              
-          }
-          
-          time_moscow = time_hrs + 3;
-          
-           // incase time hrs are greater or equal to 24
-          
-          if(time_moscow >= 24)
-              
-          {
-              time_moscow = time_moscow - 24;
-              
-          }
-          
-          
-          
-          printf("The time in washington is %d:%d hrs for %d:%d \n",time_washington,min,time_hrs,min);
-          
-          printf("The time in Beijin is %d:%d hrs for %d:%d \n",time_beijin,min,time_hrs,min);
-          
-          printf("The time in Moscow is %d:%d hrs for %d:%d \n",time_moscow,min,time_hrs,min);
-          
-
-
-      }
-      
-      
-      else{
-      
-          printf("error: Invalid time! ");
-      
-      }
-
-
-      return 0;
-      
-      
-   }
+    int main(){
+        
+		printf("***\n This program accepts your LOCAL current time in 24hrs");
+		printf("and display \n Washington, Moscow  and Beijing Local times\n ***\n");
+		
+		int hours;
+		int minutes;
+		int w, b, m; //washngton, beijing and moscow
+		
+		printf("What's your local time now (HOURS) ?: ");
+		scanf("%d", &hours);
+		
+		printf("\n and how many minutes past scince %d ?: ", hours);
+		scanf("%d", &minutes);
+		
+		//some validation but not necessary!!
+		if(hours > 23 || hours < 0)
+			printf("Enter valid hours values!!");
+			
+		w = hours - 5;
+		b = hours + 7;
+		m = hours + 3;
+		
+		//remove negative hours
+		if (w < 0) 
+			w = w * (-1);
+			
+		printf("**********************\n\t");
+		printf("In Washngton it's %d:%2d \n\t", w, minutes);
+		printf("In Beijing it's %d:%d \n\t", b, minutes);
+		printf("In Moscow it's %d:%d \n", m, minutes);
+    
+	return (0);
+}
