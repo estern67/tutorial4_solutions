@@ -3,61 +3,43 @@
 //  tutorial4_solutions
 //
 //  Created by Mohamed Diaby on 08/12/2016.
+//  Edited by Einstein winluck on 10/12/2016
 //  Copyright © 2016 Mohamed Diaby. All rights reserved.
 //
 
 #include <stdio.h>
 
 int main() {
-    
-    
+
        char marriage_status;
     
-    puts("please enter a character: \n" );
-    
+        puts("Please enter a character: \n" );
+        marriage_status = getchar();
 
-    
-    marriage_status = getchar();
-    
-    
-    
-    switch(marriage_status)
-    
-    {
-            
-            
+        switch(marriage_status){
+     
         case 'S':
-            
-            printf("single ");
+        case 's':
+            printf("Single");
             break;
-            
         case 'M':
-            
-            printf("married ");
-            break;
-            
+        case 'm':
+            printf("Married");
+            break;            
         case 'W':
-            printf("widowed ");
+        case 'w':
+            printf("Widowed");
             break;
         case 'E':
-            printf("separated ");
-            break;
-            
+        case 'e':
+            printf("Separated");
+            break;            
         case 'D':
-            printf("Divorced ");
-            
-            
+        case 'd':
+            printf("Divorced");
         default:
-            printf("error: invalid code ");
-            
-            
-            
-    }
-    
-
-    
-    
-    
-    
-    return 0;
+            printf("Error: Invalid character!!");       
+        }
+      
+ return (0);
 }
