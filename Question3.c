@@ -3,38 +3,30 @@
 //  tutorial4_solutions
 //
 //  Created by Mohamed Diaby on 09/12/2016.
+//  Edited by Einstein winluck on 10/12/2016
 //  Copyright © 2016 Mohamed Diaby. All rights reserved.
 //
 
 #include <stdio.h>
 
+    int main(){
+        
+    int firstNo;
+    int secondNo;
+    //int smallerNo;
+    
+    printf("--THIS SMALL PROGRAM COMPARE TWO different NUMBERS TO SEE WHICH IS SMALLER--\n");
+    printf("Please enter first number: \n");
+    scanf("%d",&firstNo);
+    
+    printf("Please enter second number: \n");
+    scanf("%d",&secondNo);
 
-int main()
-
-{
-
-
-    int a;
+    //smallerNo = (firstNo <= secondNo)? firstNo:secondNo;
+    (firstNo < secondNo) ? printf("%d is smallest number", firstNo) : printf("%d is smallest number", secondNo);
     
-    int b;
-    
-    int c;
-    
-    
-    printf("please enter first number: \n");
-    scanf("%d",&a);
-    
-    printf("please enter second number: \n");
-    scanf("%d",&b);
-    
-    
-    
-
-    c = (a <= b)? a:b;
-    
-    printf(" %d is the smallest number",c);
-
-
-    return 0;
+    //printf(" %d is the smallest number",smallerNo);
+        
+    return (0);
 
 }
