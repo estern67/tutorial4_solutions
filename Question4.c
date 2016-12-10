@@ -37,7 +37,7 @@
 			w = w * (-1);
 			
 		printf("**********************\n\t");
-		printf("In Washngton it's %d:%2d \n\t", w, minutes);
+		printf("In Washngton it's %d:%d \n\t", w, minutes);
 		printf("In Beijing it's %d:%d \n\t", b, minutes);
 		printf("In Moscow it's %d:%d \n", m, minutes);
     
